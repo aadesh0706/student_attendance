@@ -5,7 +5,8 @@ import pyrebase
 
 app = Flask(__name__)
 
-app.secret_key = 'AADESHGULUMBE' # for flask session
+#add here your key
+app.secret_key = '' # for flask session
 
 
 # Use a service account
@@ -14,17 +15,19 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
+
+#removing this keys for the security purposes #add your own keys here
 # pyrebase init
 # Your web app's Firebase configuration
 firebaseConfig = {
-  'apiKey': "AIzaSyAvwArJtiB-QhxIsfDZpnPhxGt6gPSr7us",
-  'authDomain': "attendancesystem-32ab2.firebaseapp.com",
-  'databaseURL': "https://attendancesystem-32ab2-default-rtdb.firebaseio.com/",
-  'projectId': "attendancesystem-32ab2",
-  'storageBucket': "attendancesystem-32ab2.appspot.com",
-  'messagingSenderId': "164441153104",
-  'appId': "1:164441153104:web:aeaf208e310cb3d6bcfb55",
-  'measurementId': "G-LSCTJWZ5PJ"
+  'apiKey': " ",
+  'authDomain': " ",
+  'databaseURL': " ",
+  'projectId': " ",
+  'storageBucket': " ",
+  'messagingSenderId': " ",
+  'appId': " ",
+  'measurementId': " "
 }
 
 firebase = pyrebase.initialize_app(firebaseConfig)
