@@ -1,0 +1,95 @@
+<!--
+ =========================================================
+ Material Kit PRO - v2.2.0
+ =========================================================
+
+ Product Page: https://www.creative-tim.com/product/material-kit-pro
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+ Coded by Creative Tim
+
+ =========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Attendance Manager</title>
+{% endblock %}
+
+{% block body %}
+<body class="landing-page sidebar-collapse">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../static/img/desk_chair.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="title">Attendance Management.</h1>
+          <h4>A solution for both teachers and students!</h4>
+          <br>
+          {% with messages = get_flashed_messages() %}
+            {% if messages: %}
+              {% for message in messages: %}
+                <h4>{{ message }}</h4>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <form action="/student_login" method="GET">
+            <button type="submit" class="btn btn-danger btn-raised btn-lg">
+              <i class="fa fa-user-circle-o"></i> 
+               Student log in/sign up
+            </button>
+          </form>
+          <form action="/teacher_login" method="GET">
+            <button type="submit" class="btn btn-danger btn-raised btn-lg">
+              <i class="fa fa-user-circle-o"></i> 
+               Teacher log in/sign up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+      <div class="section text-center">
+        <h2 class="title">Welcome to The Student Attendance System</h2>
+        <div class="team">
+          <div class="row">
+            
+            <div class="col-md-6" style="align-items: center;">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="../static/img/msg1356353739-184241.jpg" alt="Aadesh Gulumbe" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Aadesh Gulumbe<br>
+                    <!-- <small class="card-description text-muted">Model</small> -->
+                  </h4>
+                  <div class="card-footer justify-content-center">
+                    <a href="https://www.linkedin.com/in/aadesh-gulumbe-b965b0246/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/aadesh0706" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6" style="align-items: center;">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <h4>This Page is Viewed </h4>
+                  <a href="https://www.hitwebcounter.com" target="_blank">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=9559053&style=0009&nbdigits=5&type=page&initCount=20" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>
+                  <h4>Times</h4>  
+                </div>
+
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
